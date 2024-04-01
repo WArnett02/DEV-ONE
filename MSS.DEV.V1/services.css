@@ -1,0 +1,252 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url(Images/backround.lnk);
+}
+
+.Nav {
+  display: none;
+}
+
+.Header .upper {
+  background-color: black;
+  height: 6em;
+  text-align: center;
+}
+.Header .upper .container-one {
+  padding: 1.5em;
+}
+.Header .upper .container-one .Logo {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  padding-left: 0.5em;
+}
+.Header .upper .container-one .Mobile-menu {
+  float: right;
+  cursor: pointer;
+  padding-top: 0.5em;
+}
+.Header .lower {
+  background-color: #601616;
+  height: 2em;
+}
+.Header .lower .container-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.6em;
+}
+.Header .lower .container-two p {
+  color: white;
+}
+
+.Nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  right: 0;
+  margin-top: 1.64em;
+  background: #3C3838;
+  height: 100vh;
+  padding: 1em;
+  border-left: 2px solid black;
+  padding-right: 1em;
+}
+.Nav img {
+  float: right;
+  padding: 2em 0.8em;
+  cursor: pointer;
+  height: 25px;
+}
+.Nav .pre-nav {
+  margin-top: 5em;
+  display: block;
+}
+.Nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 1.8em;
+  text-align: center;
+  padding: 1em 1.5em;
+  margin-left: 1.5em;
+}
+.Nav a:hover {
+  font-weight: bold;
+  color: #601616;
+  transition: 0s;
+}
+
+.Nav.menu-btn {
+  display: block;
+}
+
+.Hero .container-hero {
+  background-color: #3C3838;
+  margin: 4em 1.5em;
+  text-align: center;
+  height: 90vh;
+}
+.Hero .container-hero h1 {
+  color: white;
+  font-size: 35px;
+  padding: 1em;
+}
+.Hero .container-hero hr {
+  margin: 0 2em;
+}
+.Hero .container-hero .container-services {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+.Hero .container-hero .container-services img {
+  margin: 1.5em 2em;
+}
+.Hero .container-hero .container-services p {
+  color: white;
+  margin: 1.5em 1em;
+  font-size: 19px;
+}
+
+.Ender .container-ender {
+  background-color: black;
+  height: 8vh;
+}
+
+@media only screen and (min-width: 960px) {
+  .Hero .container-hero {
+    margin: 4em 4.5em;
+  }
+  .Hero .container-hero .container-services {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+  .Header .container-one {
+    display: flex;
+    margin: 0 2em;
+    padding: 0%;
+  }
+  .Header .container-one .Logo {
+    padding-left: 0;
+  }
+  .Header .container-one .Mobile-menu {
+    display: none;
+  }
+  .Header .container-one .Nav {
+    display: block;
+    background: none;
+    position: relative;
+    border: none;
+  }
+  .Header .container-one .Nav img {
+    display: none;
+  }
+  .Header .container-one .Nav .pre-nav {
+    display: flex;
+    margin-top: -1.5em;
+    float: right;
+    margin-right: 0em;
+  }
+  .Header .container-one .Nav .pre-nav a {
+    padding: 0;
+    font-size: 20px;
+  }
+  .Header .lower .container-two {
+    margin: 0 4.5em;
+    padding: 0.5em 0;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1250px) {
+  .Header .container-one .Nav .pre-nav a {
+    padding: 0;
+    font-size: 23px;
+  }
+  .Hero .container-hero {
+    margin: 4em 4.5em;
+  }
+  .Hero .container-hero h1 {
+    color: white;
+    font-size: 43px;
+    padding: 1em;
+  }
+  .Hero .container-hero hr {
+    margin: 0 4em;
+  }
+  .Hero .container-hero .container-services {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+  .Hero .container-hero .container-services p {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .Header .container-one {
+    margin: 0 8em;
+  }
+  .Header .lower .container-two {
+    margin: 0 10.7em;
+  }
+  .Hero .container-hero {
+    margin: 4em 10.7em;
+  }
+  .Hero .container-hero h1 {
+    color: white;
+    font-size: 43px;
+    padding: 1em;
+  }
+  .Hero .container-hero hr {
+    margin: 0 4em;
+  }
+  .Hero .container-hero .container-services {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+  .Hero .container-hero .container-services p {
+    font-size: 23px;
+  }
+}
+@media only screen and (min-width: 1610px) {
+  .Header .container-one {
+    margin: 0 10em;
+  }
+  .Header .container-one .Nav .pre-nav a {
+    padding: 0;
+    font-size: 26px;
+  }
+  .Header .lower .container-two {
+    margin: 0 12.7em;
+  }
+  .Hero .container-hero {
+    margin: 4em 12.7em;
+  }
+  .Hero .container-hero h1 {
+    color: white;
+    font-size: 43px;
+    padding: 1em;
+  }
+  .Hero .container-hero hr {
+    margin: 0 4em;
+  }
+  .Hero .container-hero .container-services {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+  }
+  .Hero .container-hero .container-services p {
+    font-size: 26px;
+  }
+}/*# sourceMappingURL=services.css.map */

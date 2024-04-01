@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>mclaughlinspecialtyservices</title>
+</head>
+<body>
+    <section class="Header">
+
+        <div  class="upper">
+            <div class="container-one">
+
+                <a class="Logo" href="#">McLaughlin</a> 
+
+                <img id="mobile-cta" class="Mobile-menu" src="Images/Mobile-menu.svg.svg" alt="mobile menu nav">
+    
+                <div id="Nav" class="Nav">
+
+                    <img id="mobile-exit" src="Images/exit.svg" alt="">
+
+                    <div class="pre-nav">
+
+                        <a class="opp" href="#">Home</a>
+                        <a class="opp" href="About.html">About</a>
+                        <a class="opp" href="#">Contact</a>
+                        <a class="opp" href="Services.html">Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="lower">
+            <div class="container-two">
+                <p>Phone:(727)-316-1595</p>
+                <p>Email: 413MSS@gmail.com</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="Hero">
+        <div class="container-hero">
+            <div class="left">
+                <h1>McLaughlin</h1>
+                <h2>Specialty Services</h2>
+                <p>CONTACT YOUR SPECIALTY SERVICE EXPERT</p>
+                <button class="HB"><a href="#">Contact</a></button>
+            </div>
+
+            <div class="right">
+                <div class="container-img">
+                    <img src="Images/mss-hero-fotor-2.png" alt="Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Mission">
+        <div class="container-mission">
+            <h1>Mission Statement</h1>
+            <hr class="line">
+            <p>Lorem ipsum dolor sit amet consectetur. Fames mattis morbi vitae sem consequat aliquam vulputate. Elementum id in maecenas eget proin viverra sit enim. Venenatis suspendisse nunc dictum habitasse ante aenean at sit mattis. Vitae amet a cras non volutpat.</p>
+        </div>
+    </section>
+
+    <section class="Note">
+        <div class="container-note">
+            <h1 class="hidden">Note</h1>
+            <div class="vl"></div>
+            <p class="opp">Lorem ipsum dolor sit amet consectetur. Fames mattis morbi vitae sem consequat aliquam vulputate.Elementum id in maecenas eget proin viverra sit enim.</p>
+        </div>
+    </section>
+
+    <section class="Contact">
+        <div class="container-contact">
+            <h1>CONTACT YOUR SPECIALTY SERVICE EXPERT</h1>
+
+            <div class="left">
+                <div class="container">
+                    <h2>Contact</h2>
+                    <hr class="c-line">
+                    <p class="hidden">Phone: (727) - 316 - 1595</p>
+                    <p class="hidden">Email: 413MSS@gmail.com</p>
+                    <p class="hidden">Address: 2155 Creston stage</p>
+                    <hr class="c-line">
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="container">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Ender">
+        <div class="container-ender"></div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+            nav = document.getElementById('Nav');
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+
+            nav.classList.add('menu-btn');
+
+        });
+
+        mobileBtnExit.addEventListener('click', () => {
+
+            nav.classList.remove('menu-btn');
+
+        });
+        
+    </script>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } 
+            });
+        });
+
+        const observertwo = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                } else {
+                    entry.target.classList.remove('show');
+                }
+            });
+        });
+
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+
+        const oppElements = document.querySelectorAll('.opp');
+        oppElements.forEach((el) => observertwo.observe(el));
+
+    </script>
+    
+</body>
+</html>

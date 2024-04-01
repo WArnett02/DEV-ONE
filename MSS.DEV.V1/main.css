@@ -1,0 +1,515 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-x: hidden;
+  background-image: url(Images/backround.lnk);
+}
+
+.Nav {
+  display: none;
+}
+
+.Header .upper {
+  background-color: black;
+  height: 6em;
+  text-align: center;
+}
+.Header .upper .container-one {
+  padding: 1.5em;
+}
+.Header .upper .container-one .Logo {
+  text-decoration: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  padding-left: 0.5em;
+}
+.Header .upper .container-one .Mobile-menu {
+  float: right;
+  cursor: pointer;
+  padding-top: 0.5em;
+}
+.Header .lower {
+  background-color: #601616;
+  height: 2em;
+}
+.Header .lower .container-two {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1.6em;
+}
+.Header .lower .container-two p {
+  color: white;
+}
+
+.Hero .container-hero {
+  height: 90vh;
+}
+.Hero .container-hero .left {
+  text-align: center;
+  padding-top: 15em;
+}
+.Hero .container-hero .left h1 {
+  color: white;
+  font-size: 80px;
+}
+.Hero .container-hero .left h2 {
+  color: white;
+  font-size: 55px;
+}
+.Hero .container-hero .left p {
+  color: white;
+  padding: 3em;
+  font-size: 18px;
+}
+.Hero .container-hero .left .HB {
+  background-color: black;
+  border-radius: 40px;
+  width: 125px;
+  height: 50px;
+  border: solid #601616;
+  margin-top: 0.5em;
+  margin-bottom: 3em;
+  position: relative;
+  color: white;
+  cursor: pointer;
+}
+.Hero .container-hero .left .HB a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.Hero .container-hero .left .HB::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  outline: 2px solid #601616;
+  border-radius: 50px;
+  outline-offset: 2px;
+  outline-width: 2px;
+  animation: pulse 1.5s linear infinite;
+}
+.Hero .container-hero .left ::-moz-placeholder {
+  color: white;
+  font-size: 17px;
+}
+.Hero .container-hero .left ::placeholder {
+  color: white;
+  font-size: 17px;
+}
+.Hero .container-hero .right {
+  display: none;
+}
+
+.Mission .container-mission {
+  background-color: #3C3838;
+  height: 33vh;
+  text-align: center;
+}
+.Mission .container-mission h1 {
+  color: white;
+  padding: 0.8em;
+  font-size: 40px;
+}
+.Mission .container-mission .line {
+  margin-left: 2em;
+  margin-right: 2em;
+  border: 1px solid black;
+}
+.Mission .container-mission p {
+  color: white;
+  padding: 2em 2em;
+  font-size: 20px;
+}
+
+.Note .container-note {
+  background-color: #601616;
+  height: 10vh;
+  padding: 1em 2em;
+  display: grid;
+  grid-template-columns: 80px 50px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.Note .container-note .vl {
+  border-left: 2px solid black;
+  height: 50px;
+}
+.Note .container-note p {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+.Contact .container-contact {
+  text-align: center;
+  margin: 2em;
+  height: 70vh;
+}
+.Contact .container-contact h1 {
+  color: white;
+  padding: 2em 1em;
+  font-size: 25px;
+}
+.Contact .container-contact .left .container {
+  background-color: #3C3838;
+  height: 43vh;
+}
+.Contact .container-contact .left .container h2 {
+  color: white;
+  font-size: 30px;
+  padding: 1em;
+}
+.Contact .container-contact .left .container p {
+  color: white;
+  padding: 2em;
+  font-size: 18px;
+}
+.Contact .container-contact .left .container .c-line {
+  margin: 0 2em;
+  border: 1px solid black;
+}
+
+.Ender .container-ender {
+  background-color: black;
+  height: 6vh;
+}
+
+.Nav {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  right: 0;
+  margin-top: 1.64em;
+  background: #3C3838;
+  height: 100vh;
+  padding: 1em;
+  border-left: 2px solid black;
+  padding-right: 1em;
+}
+.Nav img {
+  float: right;
+  padding: 2em 0.8em;
+  cursor: pointer;
+  height: 25px;
+}
+.Nav .pre-nav {
+  margin-top: 5em;
+  display: block;
+}
+.Nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  font-size: 1.8em;
+  text-align: center;
+  padding: 1em 1.5em;
+  margin-left: 1.5em;
+}
+.Nav a:hover {
+  font-weight: bold;
+  color: #601616;
+  transition: 0s;
+}
+
+.Nav.menu-btn {
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+.opp {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1.3s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes pulse {
+  0% {
+    outline-offset: 2px;
+    opacity: 1;
+  }
+  100% {
+    outline-offset: 20px;
+    opacity: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .Contact .container-contact {
+    margin: 0 8em;
+  }
+  .Contact .container-contact h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 880px) {
+  .Header .container-one {
+    display: flex;
+    margin: 0 1em;
+    padding: 0%;
+  }
+  .Header .container-one .Logo {
+    padding-left: 0;
+  }
+  .Header .container-one .Mobile-menu {
+    display: none;
+  }
+  .Header .container-one .Nav {
+    display: block;
+    background: none;
+    position: relative;
+    border: none;
+  }
+  .Header .container-one .Nav img {
+    display: none;
+  }
+  .Header .container-one .Nav .pre-nav {
+    display: flex;
+    margin-top: -1.5em;
+    float: right;
+    margin-right: 0em;
+  }
+  .Header .container-one .Nav .pre-nav a {
+    padding: 0;
+    font-size: 20px;
+  }
+  .Header .lower .container-two {
+    margin: 0 3.7em;
+    padding: 0.5em 0;
+    justify-content: space-between;
+  }
+  .Mission .container-mission {
+    padding: 0 1em;
+  }
+  .Note .container-note {
+    padding: 0 3em;
+  }
+  .Contact .container-contact {
+    margin: 0 10em;
+  }
+  .Contact .container-contact h1 {
+    font-size: 30px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .Header .container-one {
+    margin: 0 4em;
+  }
+  .Header .lower .container-two {
+    margin: 0 6.7em;
+  }
+  .Mission .container-mission {
+    padding: 0 4em;
+  }
+  .Note .container-note {
+    padding: 0 6em;
+  }
+  .Contact .container-contact {
+    margin: 0 13em;
+    height: 80vh;
+  }
+  .Contact .container-contact h1 {
+    font-size: 33px;
+  }
+  .Contact .container-contact .left .container {
+    height: 50vh;
+  }
+  .Hero .container-hero {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 7em;
+    margin-right: 4.5em;
+  }
+  .Hero .container-hero .left {
+    padding-top: 5em;
+    text-align: left;
+  }
+  .Hero .container-hero .left p {
+    font-size: 16px;
+    left: 0;
+    padding: 3em 0;
+  }
+  .Hero .container-hero .right {
+    display: block;
+  }
+  .Hero .container-hero .right .container-img {
+    background-color: #601616;
+    border-radius: 200px;
+    width: 300px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  .Hero .container-hero .right .container-img img {
+    height: 300px;
+  }
+}
+@media only screen and (min-width: 1160px) {
+  .Contact .container-contact {
+    margin: 0 17em;
+    height: 80vh;
+  }
+  .Contact .container-contact h1 {
+    font-size: 33px;
+  }
+  .Contact .container-contact .left .container {
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 1160px) {
+  .Header .container-one {
+    margin: 0 8em;
+  }
+  .Header .lower .container-two {
+    margin: 0 10.7em;
+  }
+  .Hero .container-hero {
+    margin-left: 11em;
+    margin-right: 8.5em;
+  }
+  .Mission .container-mission {
+    padding: 0 8em;
+  }
+  .Note .container-note {
+    padding: 0 10em;
+  }
+}
+@media only screen and (min-width: 1340px) {
+  .Header .container-one .Nav .pre-nav a {
+    padding: 0;
+    font-size: 23px;
+  }
+  .Mission .container-mission {
+    padding: 0 8em;
+  }
+  .Mission .container-mission h1 {
+    font-size: 45px;
+  }
+  .Mission .container-mission p {
+    font-size: 23px;
+  }
+  .Note .container-note {
+    padding: 0 10em;
+  }
+  .Note .container-note h1 {
+    font-size: 25px;
+  }
+  .Note .container-note p {
+    font-size: 23px;
+  }
+  .Contact .container-contact {
+    margin: 0 20em;
+    height: 90vh;
+  }
+  .Contact .container-contact h1 {
+    font-size: 40px;
+  }
+  .Contact .container-contact .left .container {
+    height: 55vh;
+    padding: 0 3em;
+  }
+  .Contact .container-contact .left .container p {
+    font-size: 20px;
+  }
+  .Hero .container-hero .left h1 {
+    font-size: 85px;
+  }
+  .Hero .container-hero .left h2 {
+    font-size: 60px;
+  }
+  .Hero .container-hero .left p {
+    padding: 2em 0;
+    font-size: 23px;
+  }
+  .Hero .container-hero .right .container-img {
+    background-color: #601616;
+    border-radius: 200px;
+    width: 320px;
+    text-align: center;
+    border: 1px solid black;
+  }
+  .Hero .container-hero .right .container-img img {
+    height: 320px;
+  }
+}
+@media only screen and (min-width: 1530px) {
+  .Header .container-one {
+    margin: 0 10em;
+  }
+  .Header .lower .container-two {
+    margin: 0 12.7em;
+  }
+  .Hero .container-hero {
+    margin-left: 13em;
+    margin-right: 10.5em;
+  }
+  .Mission .container-mission {
+    padding: 0 10em;
+  }
+  .Note .container-note {
+    padding: 0 13em;
+  }
+  .Contact .container-contact {
+    margin: 0 22em;
+    height: 95vh;
+  }
+  .Contact .container-contact h1 {
+    font-size: 45px;
+  }
+  .Contact .container-contact .left .container {
+    height: 60vh;
+    padding: 0 6em;
+  }
+  .Contact .container-contact .left .container p {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 1690px) {
+  .Header .container-one {
+    margin: 0 13em;
+  }
+  .Header .lower .container-two {
+    margin: 0 15.7em;
+  }
+  .Hero .container-hero {
+    margin-left: 16em;
+    margin-right: 13.5em;
+  }
+  .Mission .container-mission {
+    padding: 0 13em;
+  }
+  .Note .container-note {
+    padding: 0 16em;
+  }
+  .Contact .container-contact {
+    margin: 0 28em;
+    height: 95vh;
+  }
+  .Contact .container-contact h1 {
+    font-size: 45px;
+  }
+  .Contact .container-contact .left .container {
+    height: 60vh;
+    padding: 0 6em;
+  }
+  .Contact .container-contact .left .container p {
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=main.css.map */

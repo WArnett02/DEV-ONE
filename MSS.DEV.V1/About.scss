@@ -1,0 +1,511 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-image: url(Images/backround.lnk);
+}
+
+.Nav {
+    display: none;
+}
+
+.Header {
+
+    .upper {
+        background-color: black;
+        height: 6em;
+        text-align: center;
+        
+        .container-one {
+            padding: 1.5em;
+
+            .Logo {
+                text-decoration: none;
+                color: white;
+                font-size: 40px;
+                cursor: pointer;
+                padding-left: .5em;
+            }
+    
+            .Mobile-menu {
+                float: right;
+                cursor: pointer;
+                padding-top: .5em;
+                
+            }
+        }
+    }
+
+    .lower {
+        background-color:#601616;
+        height: 2em;
+        
+        .container-two {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: .5em 1.6em;
+
+            p {
+                color: white;
+            }
+        }
+    }
+}
+
+.Nav {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    right: 0;
+    margin-top: 1.64em;
+    background: #3C3838;
+    height: 100vh;
+    padding: 1em;
+    border-left: 2px solid black;
+    padding-right: 1em;
+
+    img {
+        float: right;
+        padding: 2em .8em;
+        cursor: pointer;
+        height: 25px;
+    }
+
+    .pre-nav {
+        margin-top: 5em;
+        display: block;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        font-size: 1.8em;
+        text-align: center;
+        padding: 1em 1.5em;
+        margin-left: 1.5em;
+
+        &:hover {
+            font-weight: bold;
+            color: #601616;
+            transition: 0s;
+        }
+    }
+}
+
+.Nav.menu-btn {
+    display: block;
+}
+
+.Hero {
+    .container-hero {
+        text-align: center;
+        margin:3em 1.5em;
+        height: 68vh;
+        background-color: #2b2929;
+        padding-top: 4em;
+        border: 2px solid black;
+
+        img {
+            width: 400px;
+            height: auto;
+            border: 2px solid black;
+        }
+
+        p {
+            color: white;
+            padding:1.5em 1em;
+            font-size: 25px;
+        }
+    }
+
+    .container-two {
+        background-color: #601616;
+        text-align: center;
+        height: 65vh;
+        align-items: center;
+        margin: 1.5em;
+        border:2px solid black ;
+
+        p {
+            color: white;
+            padding: 1.5em 1em;
+            font-size: 23px;
+        }
+    }
+
+    .container-three {
+        text-align: center;
+        margin-top: 6em;
+        margin: 2em 1.5em;
+        background-color: #2b2929;
+        padding-top: 3em;
+        border: 2px solid black;
+        
+
+        img {
+            width: 400px;
+            height: auto;
+            border: 2px solid black;
+        }
+
+        p {
+            color: white;
+            padding: 1em;
+            font-size: 25px;
+        }
+    }
+}
+
+.Ender {
+    
+    .container-ender {
+        background-color: black;
+        height: 8vh;
+    }
+}
+
+.hidden {
+    opacity: 0;
+    //filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.opp {
+    opacity: 0;
+    //filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1.3s;
+}
+
+.show {
+    opacity: 1;
+    //filter: blur(0);
+    transform: translateX(0);
+    
+}
+
+@media only screen and (min-width: 900px) {
+
+    .Header {
+        
+        .container-one {
+            display: flex;
+            margin: 0 2em;
+            padding: 0%;
+
+            .Logo {
+                padding-left: 0;
+            }
+
+            .Mobile-menu {
+                display: none;
+            }
+
+            .Nav {
+                display: block;
+                background: none;
+                position: relative;
+                border: none;
+
+                img {
+                    display: none;
+                }
+
+                .pre-nav {
+                    display: flex;
+                    margin-top: -1.5em;
+                    float: right;
+                    margin-right: 0em;
+
+                    a {
+                        padding: 0;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .lower {
+
+            .container-two {
+                margin: 0 4.5em;
+                padding: .5em 0;
+                justify-content: space-between;
+            }
+        }
+    }
+
+    .Hero {
+
+        .container-hero {
+            text-align: center;
+            margin:3em 4.5em;
+            height: 68vh;
+            background-color: #2b2929;
+            padding-top: 4em;
+            border: 2px solid black;
+    
+            img {
+                width: 500px;
+                height: auto;
+                border: 2px solid black;
+            }
+    
+            p {
+                color: white;
+                padding:1.5em 2em;
+                font-size: 27px;
+            }
+        }
+
+        .container-two {
+            background-color: #601616;
+            text-align: center;
+            height: 65vh;
+            align-items: center;
+            margin: 4.5em;
+            border:2px solid black ;
+    
+            p {
+                color: white;
+                padding: 2em;
+                font-size: 27px;
+            }
+        }
+
+        .container-three {
+            text-align: center;
+            margin-top: 6em;
+            margin: 4.5em;
+            background-color: #2b2929;
+            padding-top: 3em;
+            border: 2px solid black;
+            
+    
+            img {
+                width: 500px;
+                height: auto;
+                border: 2px solid black;
+            }
+    
+            p {
+                color: white;
+                padding:1.5em 2em;
+                font-size: 27px;
+            }
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .Header {
+
+        .container-one {
+            margin: 0 6em;
+
+            .Nav {
+
+                .pre-nav {
+
+                    a {
+                        padding: 0;
+                        font-size: 23px;
+                    }
+                }
+            }
+        }
+
+        .lower {
+
+            .container-two {
+                margin: 0 8.7em;
+            }
+        }
+    }
+
+    .Hero {
+
+        .container-hero {
+            text-align: center;
+            margin:3em 8.5em;
+            height: 70vh;
+            background-color: #2b2929;
+            padding-top: 4em;
+            border: 2px solid black;
+    
+            img {
+                width: 550px;
+                height: auto;
+                border: 2px solid black;
+            }
+    
+            p {
+                color: white;
+                padding:1.5em 4em;
+                font-size: 27px;
+
+            }
+        }
+
+        .container-two {
+            background-color: #601616;
+            text-align: center;
+            height: 65vh;
+            align-items: center;
+            margin: 8.5em;
+            border:2px solid black ;
+    
+            p {
+                color: white;
+                padding: 2em;
+                font-size: 27px;
+            }
+        }
+
+        .container-three {
+            text-align: center;
+            margin-top: 6em;
+            margin: 8.5em;
+            background-color: #2b2929;
+            padding-top: 3em;
+            border: 2px solid black;
+            
+    
+            img {
+                width: 500px;
+                height: auto;
+                border: 2px solid black;
+            }
+    
+            p {
+                color: white;
+                padding:1.5em 2em;
+                font-size: 27px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+
+    .container-three {
+        text-align: center;
+        margin-top: 6em;
+        margin: 8.5em;
+        background-color: #2b2929;
+        padding-top: 3em;
+        border: 2px solid black;
+        
+
+        img {
+            width: 100%;
+            height: auto;
+            border: 2px solid black;
+            margin: 2em;
+        }
+
+        p {
+            color: white;
+            padding:1.5em 1em;
+            font-size: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .Header {
+
+        .container-one {
+            margin: 0 10em;
+
+            .Nav {
+
+                .pre-nav {
+
+                    a {
+                        padding: 0;
+                        font-size: 26px;
+                    }
+                }
+            }
+        }
+
+        .lower {
+
+            .container-two {
+                margin: 0 12.7em;
+            }
+        }
+    }
+
+    .Hero {
+
+        .container-hero {
+            text-align: center;
+            margin:3em 12.5em;
+            height: 72vh;
+            background-color: #2b2929;
+            padding-top: 4em;
+            border: 2px solid black;
+    
+            img {
+                width: 600px;
+                height: auto;
+                border: 2px solid black;
+            }
+    
+            p {
+                color: white;
+                padding:1.5em 4em;
+                font-size: 30px;
+
+            }
+        }
+
+        .container-two {
+            background-color: #601616;
+            text-align: center;
+            height: 65vh;
+            align-items: center;
+            margin: 12.5em;
+            border:2px solid black ;
+    
+            p {
+                color: white;
+                padding: 2em;
+                font-size: 30px;
+            }
+        }
+
+        .container-three {
+            text-align: center;
+            margin-top: 6em;
+            margin: 12.5em;
+            background-color: #2b2929;
+            padding-top: 3em;
+            border: 2px solid black;
+            
+    
+            img {
+                width: 450px;
+                height: auto;
+                border: 2px solid black;
+            }
+    
+            p {
+                color: white;
+                padding:1.5em 2em;
+                font-size: 30px;
+            }
+        }
+    }
+}
+

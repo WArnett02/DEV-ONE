@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="About.css">
+    <title>About</title>
+</head>
+<body>
+
+    <section class="Header">
+
+        <div  class="upper">
+            <div class="container-one">
+
+                <a class="Logo" href="#">McLaughlin</a> 
+
+                <img id="mobile-cta" class="Mobile-menu" src="Images/Mobile-menu.svg.svg" alt="mobile menu nav">
+    
+                <div id="Nav" class="Nav">
+
+                    <img id="mobile-exit" src="Images/exit.svg" alt="">
+
+                    <div class="pre-nav">
+
+                        <a class="opp" href="index.html">Home</a>
+                        <a class="opp" href="About.html">About</a>
+                        <a class="opp" href="#">Contact</a>
+                        <a class="opp" href="Services.html">Services</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="lower">
+            <div class="container-two">
+                <p>Phone:(727)-316-1595</p>
+                <p>Email: 413MSS@gmail.com</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="Hero">
+        <div class="container-hero">
+
+            <img src="Images/services-hero.jpg" alt="image of family">
+            <p>My name is Steven McLaughlin i am the owner/operator of McLaughlin Specialty Services, I have worked in the construction industry in Pinellas County since 1983 with most of that time being in Plumbing, New construction, Remodel, Service and repair.</p>
+        </div>
+
+        <div class="container-two">
+            <p class="hidden">I have spent several years working in the water treatment industry installing and maintaining water purification systems for kidney dialysis centers throughout Pinellas  and Hillsbourgh counties.</p>
+
+            <p class="hidden">I have also installed, serviced and repaired systems in residential, commercial, industrial and pharmaceutical manufacturing.</p>
+
+            <p class="hidden">I have worked for custom home builders, air conditioning, el3ectrical and general contractors. I have good working relationships with state licensed contractors in all the trades.</p>
+        </div>
+
+        <div class="container-three">
+            <img src="Images/services-hero-two.jpg" alt="image of truck">
+            <p>I have worked in several local hospitals and schools. i have obtained several background checks including military clearance to work at Jabil Circuit. i have numerous references which i will provide if needed.
+                <br> <br>I have decided to spend the final inning of my working career doing the things i enjoy the most, I look forward to this new season and anticipate the challenge of finding solutions to difficult problems for my customers</p>
+
+        </div>
+
+    </section>
+
+    <section class="Ender">
+        <div class="container-ender"></div>
+    </section>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta');
+            nav = document.getElementById('Nav');
+            mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+
+            nav.classList.add('menu-btn');
+
+        });
+
+        mobileBtnExit.addEventListener('click', () => {
+
+            nav.classList.remove('menu-btn');
+
+        });
+        
+    </script>
+
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } 
+        });
+    });
+
+    const observertwo = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    const oppElements = document.querySelectorAll('.opp');
+    oppElements.forEach((el) => observertwo.observe(el));
+
+</script>
+    
+</body>
+</html>
